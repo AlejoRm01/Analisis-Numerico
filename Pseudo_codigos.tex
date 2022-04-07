@@ -1,0 +1,95 @@
+\documentclass{document}
+\usepackage[papersize={8cm,14cm}]{geometry}
+\usepackage{amsmath}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+% traducción
+\floatname{algorithm}{Algoritmo}
+\renewcommand{\listalgorithmname}{Lista de algoritmos}
+\renewcommand{\algorithmicrequire}{\textbf{Input:}}
+\renewcommand{\algorithmicensure}{\textbf{Output:}}
+\renewcommand{\algorithmicend}{\textbf{End}}
+\renewcommand{\algorithmicif}{\textbf{if}}
+\renewcommand{\algorithmicthen}{\textbf{Then}}
+\renewcommand{\algorithmicelse}{\textbf{else if}}
+\renewcommand{\algorithmicelsif}{\algorithmicelse,\ \algorithmicif}
+\renewcommand{\algorithmicendif}{\algorithmicend\ \algorithmicif}
+\renewcommand{\algorithmicfor}{\textbf{For}}
+\renewcommand{\algorithmicforall}{\textbf{para todo}}
+\renewcommand{\algorithmicdo}{\textbf{do}}
+\renewcommand{\algorithmicendfor}{\algorithmicend\ \algorithmicfor}
+\renewcommand{\algorithmicwhile}{\textbf{While}}
+\renewcommand{\algorithmicendwhile}{\algorithmicend\ \algorithmicwhile}
+\renewcommand{\algorithmicloop}{\textbf{repetir}}
+\renewcommand{\algorithmicendloop}{\algorithmicend\ \algorithmicloop}
+\renewcommand{\algorithmicrepeat}{\textbf{repetir}}
+\renewcommand{\algorithmicuntil}{\textbf{hasta que}}
+\renewcommand{\algorithmicprint}{\textbf{Print}} 
+\renewcommand{\algorithmicreturn}{\textbf{Return}} 
+\renewcommand{\algorithmictrue}{\textbf{True}} 
+\renewcommand{\algorithmicfalse}{\textbf{False }} 
+\begin{document}
+\begin{algorithm}
+\begin{algorithmic}[1]
+  \REQUIRE $n$
+  \ENSURE  $suma$
+  \STATE $suma \leftarrow 0$
+  \FOR{$i\gets 1,n$}
+  \STATE $suma\leftarrow suma+i^2$
+  \ENDFOR
+  \RETURN $suma$
+\end{algorithmic} 
+  
+  \caption{BISECTION}
+  \label{a1}
+\end{algorithm}
+
+\begin{algorithm}
+  \begin{algorithmic}[0]
+    \REQUIRE $n$
+    \ENSURE  $suma$
+    \STATE $suma \leftarrow 0$
+    \STATE $i \leftarrow 1$
+    \WHILE{$i\leq n$}
+    \STATE $suma\leftarrow suma+i^2$
+    \STATE $i \leftarrow i+1$
+    \ENDWHILE
+    \RETURN $suma$
+  \end{algorithmic}
+  \caption{Uso del entorno While}
+  \label{a2}
+\end{algorithm}
+
+\begin{algorithm}
+  \begin{algorithmic}[0]
+    \REQUIRE $n$
+    \ENSURE  $out$
+    \IF{$i \% n=0$}
+    \STATE $out\leftarrow 1$
+    \ELSE 
+    \STATE $out\leftarrow 0$
+    \ENDIF
+    \RETURN $out$
+  \end{algorithmic}
+  \caption{Uso del entorno if}
+  \label{a3}
+\end{algorithm}
+\begin{algorithm}
+  \begin{algorithmic}[0]
+    \REQUIRE $n, m$
+    \ENSURE  $out$
+    \IF{$m/n<10$}
+    \STATE $out\leftarrow 1$
+    \ELSIF{$m/n<5$} 
+    \STATE $out\leftarrow 2$
+    \ELSE
+    \STATE $out\leftarrow 3$
+    \ENDIF
+    \RETURN $out$
+  \end{algorithmic}
+  \caption{Uso del entorno elseif}
+  \label{a4}
+   
+\end{algorithm}
+
+\end{document}<
